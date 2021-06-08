@@ -53,6 +53,11 @@ h2 {
   color: #fafafa;
 }
 
+h3 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
 b {
   font-weight: 500;
 }
@@ -102,6 +107,70 @@ section {
   text-align: justify;
   margin: 1em 0;
   line-height: 1.7;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 450ms ease;
+  transition: all 450ms ease;
+  padding: 0.7em 1em;
+  border-radius: 5px;
+}
+
+.svg {
+  -webkit-transition: all 450ms ease;
+  transition: all 450ms ease;
+}
+
+.btn_filled {
+  color: #0d004d;
+  background-color: #fafafa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn_filled .svg {
+  margin-right: 0.5em;
+  fill: #0d004d;
+}
+
+.btn_filled:hover {
+  background: linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #ffffff 0%, #020063 100%), linear-gradient(58.72deg, #2200f2 0%, #530000 100%), linear-gradient(154.03deg, #b70000 0%, #ff003d 74.04%), linear-gradient(341.1deg, #ff0000 7.52%, #0038ff 77.98%), linear-gradient(136.23deg, #00c2ff 11.12%, #ff0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #b50000 0%, #0034bb 100%);
+  background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+  color: #fafafa;
+}
+
+.btn_filled:hover .launch_svg {
+  fill: #fafafa;
+}
+
+.btn_transparent {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.btn_transparent .svg {
+  margin-right: 0.5em;
+  fill: #fafafa;
+}
+
+.btn_transparent:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #44dccd;
+}
+
+.btn_transparent:hover .svg {
+  fill: #44dccd;
 }
 
 /*
@@ -267,6 +336,73 @@ Layout
 
 #aboutMe .text_aboutMe {
   font-size: 1.25rem;
+}
+
+/* ======== Featured ======== */
+#featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: linear-gradient(301.28deg, #00c2ff 54.38%, rgba(0, 255, 224, 0) 100%), linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #8000ff 0%, #ba75ff 54.17%, #ff0000 100%), linear-gradient(58.72deg, #2200f2 0%, #530000 100%), linear-gradient(154.03deg, #ff0000 0%, #00ff94 74.04%), linear-gradient(301.27deg, #ff0000 0%, #0038ff 84.63%), linear-gradient(136.23deg, #00c2ff 11.12%, #ff0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #b50000 0%, #0034bb 100%);
+  background-blend-mode: multiply, overlay, color-burn, screen, difference, difference, difference, normal;
+}
+
+#featured .title_featured {
+  margin: 0.8em 0 0.2em 0;
+}
+
+#featured .content_featured {
+  color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#featured .subtitle {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#featured .mockup {
+  max-width: 325px;
+  margin: 2em 0;
+}
+
+#featured .wrapper_btn_featured {
+  width: 335px;
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 /*

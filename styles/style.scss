@@ -47,6 +47,10 @@ h2 {
   font-size: $size-3;
   color: $cl-white-1;
 }
+h3 {
+  font-size: $size-3;
+  font-weight: 600;
+}
 
 b {
   font-weight: 500;
@@ -73,6 +77,52 @@ section {
   text-align: justify;
   margin: $margin-text-y;
   line-height: $line-height-text;
+}
+
+.btn {
+  @include flex(0, center, space-between);
+  @include transition(all, 450ms, ease);
+  padding: 0.7em 1em;
+  border-radius: $border-radius;
+}
+
+.svg {
+  @include transition(all, 450ms, ease);
+}
+
+.btn_filled {
+  color: $cl-blue-2;
+  background-color: $cl-white-1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  .svg {
+    margin-right: 0.5em;
+    fill: $cl-blue-2;
+  }
+}
+.btn_filled:hover {
+  @include gradientSelection("landing");
+  color: $cl-white-1;
+
+  .launch_svg {
+    fill: $cl-white-1;
+  }
+}
+
+.btn_transparent {
+  border: 1px solid rgba(0, 0, 0, 0);
+  .svg {
+    margin-right: 0.5em;
+    fill: $cl-white-1;
+  }
+}
+.btn_transparent:hover {
+  background-color: $cl-dark-transparent-2;
+  color: $cl-cyan-1;
+
+  .svg {
+    fill: $cl-cyan-1;
+  }
 }
 
 /*
@@ -175,6 +225,31 @@ Layout
 
   .text_aboutMe {
     font-size: $size-4;
+  }
+}
+
+/* ======== Featured ======== */
+#featured {
+  @include flex(column, center, flex-start);
+  @include gradientSelection("featured");
+  .title_featured {
+    margin: $margin-title-y;
+  }
+  .content_featured {
+    color: $cl-white-1;
+    @include flex(column, center, center);
+  }
+  .subtitle {
+    align-self: flex-start;
+  }
+  .mockup {
+    max-width: 325px;
+    margin: 2em 0;
+  }
+  .wrapper_btn_featured {
+    width: 335px;
+    margin: 1em 0;
+    @include flex(0, center, space-around);
   }
 }
 
