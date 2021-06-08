@@ -10,7 +10,10 @@ Variables
 ==================
 */
 /* ======== Colors ======== */
+/* ======== Sizes ======== */
 /* ======== Fonts ======== */
+/* ======== Margins & Padding ======== */
+/* ======== Borders ======== */
 /*
 ==================
 Mixins
@@ -30,6 +33,11 @@ CSS Reset
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
 /*
 ==================
 Global
@@ -38,7 +46,8 @@ Global
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: #0D004D;
+  color: #0d004d;
+  background-color: #0d004d;
 }
 
 /*
@@ -51,6 +60,72 @@ Special Classes
 Layout
 ==================
 */
+.navbar {
+  position: fixed;
+  height: 4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.25em;
+  -webkit-transition: background-color 450ms ease;
+  transition: background-color 450ms ease;
+}
+
+.navbar .nav_links {
+  position: fixed;
+  width: 100%;
+  top: 4rem;
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 450ms ease;
+  transition: all 450ms ease;
+}
+
+.navbar .link {
+  padding: 1em 1.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.navbar .link:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #44dccd;
+}
+
+.navbar.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav_links.active {
+  left: 0;
+}
+
+.hamburguer.active {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 /*
 ==================
 Media Queries
