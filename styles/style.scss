@@ -1,0 +1,78 @@
+/*
+==================
+Fonts
+==================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*
+==================
+Variables
+==================
+*/
+
+/* ======== Colors ======== */
+$cl-white-1: #FAFAFA;
+$cl-white-2: #F1F0F6;
+$cl-black-1: #040918;
+$cl-blue-1: #07072E;
+$cl-blue-2: #0D004D;
+$cl-cyan-1: #2FC7B8;
+$cl-red-1: #D80001;
+$cl-red-2: #F8393A;
+
+/* ======== Fonts ======== */
+$font-stack: 'Poppins', sans-serif;
+$font-base-size: 16px;  
+$font-size-1: 4rem; //64px
+$font-size-2: 3.125rem; //50px
+$font-size-3: 2.25rem;  //36px
+$font-size-4: 1.25rem;  //20px
+$font-size-5: 0.875rem; //14px
+$font-size-5: 0.625rem; //10px
+
+/*
+==================
+Mixins
+==================
+*/
+
+/*
+==================
+CSS Reset
+==================
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+==================
+Global
+==================
+*/
+body {
+  font-family: $font-stack;
+  font-size: $font-base-size;
+  color: $cl-blue-2;
+}
+
+/*
+==================
+Special Classes
+==================
+*/
+
+/*
+==================
+Layout
+==================
+*/
+
+/*
+==================
+Media Queries
+==================
+*/

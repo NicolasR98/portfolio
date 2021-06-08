@@ -1,0 +1,59 @@
+/*
+==================
+Fonts
+==================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/*
+==================
+Variables
+==================
+*/
+/* ======== Colors ======== */
+/* ======== Fonts ======== */
+/*
+==================
+Mixins
+==================
+*/
+/*
+==================
+CSS Reset
+==================
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+==================
+Global
+==================
+*/
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #0D004D;
+}
+
+/*
+==================
+Special Classes
+==================
+*/
+/*
+==================
+Layout
+==================
+*/
+/*
+==================
+Media Queries
+==================
+*/
+/*# sourceMappingURL=style.css.map */
