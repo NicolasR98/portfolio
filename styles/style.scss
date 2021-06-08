@@ -1,63 +1,12 @@
 /*
 ==================
-Fonts
+Imports
 ==================
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-/*
-==================
-Variables
-==================
-*/
-/* ======== Colors ======== */
-$cl-white-1: #fafafa;
-$cl-white-2: #f1f0f6;
-$cl-black-1: #040918;
-$cl-blue-1: #07072e;
-$cl-blue-2: #0d004d;
-$cl-cyan-1: #44dccd;
-$cl-red-1: #d80001;
-$cl-red-2: #f8393a;
+@import "base/index";
 
-$cl-light-transparent-1: rgba(255, 255, 255, 0.05);
-$cl-dark-transparent-1: rgba(0, 0, 0, 0.3);
-$cl-dark-transparent-2: rgba(0, 0, 0, 0.35);
-
-/* ======== Sizes ======== */
-$size-1: 4rem; //64px
-$size-2: 3.125rem; //50px
-$size-3: 2.25rem; //36px
-$size-4: 1.25rem; //20px
-$size-5: 0.875rem; //14px
-$size-5: 0.625rem; //10px
-
-/* ======== Fonts ======== */
-$font-stack: "Poppins", sans-serif;
-$font-base-size: 16px;
-
-/* ======== Margins & Padding ======== */
-$padding-nav-link: 1em 1.5em;
-$padding-x: 0 1.25em;
-
-/* ======== Borders ======== */
-$border-nav-link: 1px solid $cl-light-transparent-1;
-
-/*
-==================
-Mixins
-==================
-*/
-@mixin flex($orientation: row, $align: stretch, $justify: stretch) {
-  display: flex;
-  flex-direction: $orientation;
-  align-items: $align;
-  justify-content: $justify;
-}
-
-@mixin transition($props: all, $duration: 250ms, $timing: ease) {
-  transition: $props $duration $timing;
-}
 /*
 ==================
 CSS Reset
@@ -86,18 +35,32 @@ body {
   color: $cl-blue-2;
   background-color: $cl-blue-2;
 }
+h1 {
+  font-size: $size-2;
+}
+
+h2 {
+  font-size: $size-3;
+  color: $cl-white-1;
+}
 
 /*
 ==================
 Special Classes
 ==================
 */
+.text_outline {
+  color: transparent;
+  -webkit-text-stroke: 1px $cl-white-1;
+}
 
 /*
 ==================
 Layout
 ==================
 */
+
+/* ======== Navbar ======== */
 .navbar {
   position: fixed;
   height: $size-1;
@@ -125,6 +88,10 @@ Layout
     background-color: $cl-dark-transparent-2;
     color: $cl-cyan-1;
   }
+
+  .hamburguer {
+    @include transition();
+  }
 }
 
 .navbar.active {
@@ -134,8 +101,31 @@ Layout
   left: 0;
 }
 .hamburguer.active {
-  @include transition();
   transform: rotate(90deg);
+}
+
+/* ======== Main Content ======== */
+#main_content {
+  width: 100%;
+  height: 100%;
+  @include flex(0, center, center);
+}
+
+/* ======== Landing ======== */
+#landing {
+  height: 100vh;
+  width: 100%;
+  @include flex(0, center, center);
+  @include gradientSelection("landing");
+
+  .landing_container {
+    width: 90%;
+    height: 100%;
+    @include flex(column, center, center);
+  }
+  .hero_title {
+    line-height: 1.2;
+  }
 }
 
 /*
