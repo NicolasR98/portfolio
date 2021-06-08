@@ -23,8 +23,12 @@ $size-5: 0.625rem; //10px
 /* ======== Fonts ======== */
 $font-stack: "Poppins", sans-serif;
 $font-base-size: 16px;
+$letter-spacing: -1.2px;
+$line-height-text: 1.7;
 
 /* ======== Margins & Padding ======== */
+$margin-title-y: 0.8em 0 0.2em 0;
+$margin-text-y: 1em 0;
 $padding-nav-link: 1em 1.5em;
 $padding-x: 0 1.25em;
 

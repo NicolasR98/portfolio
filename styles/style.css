@@ -33,6 +33,10 @@ a {
 Global
 ==================
 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -47,6 +51,57 @@ h1 {
 h2 {
   font-size: 2.25rem;
   color: #fafafa;
+}
+
+b {
+  font-weight: 500;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_container {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  font-size: 3.125rem;
+  letter-spacing: -1.2px;
+}
+
+.text {
+  text-align: justify;
+  margin: 1em 0;
+  line-height: 1.7;
 }
 
 /*
@@ -143,8 +198,8 @@ Layout
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: 0;
-          flex-direction: 0;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -155,28 +210,38 @@ Layout
 
 /* ======== Landing ======== */
 #landing {
-  height: 100vh;
-  width: 100%;
+  background: linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #ffffff 0%, #020063 100%), linear-gradient(58.72deg, #2200f2 0%, #530000 100%), linear-gradient(154.03deg, #b70000 0%, #ff003d 74.04%), linear-gradient(341.1deg, #ff0000 7.52%, #0038ff 77.98%), linear-gradient(136.23deg, #00c2ff 11.12%, #ff0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #b50000 0%, #0034bb 100%);
+  background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+}
+
+#landing .hero_title {
+  line-height: 1.2;
+}
+
+/* ======== About Me ======== */
+#aboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: 0;
-          flex-direction: 0;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #ffffff 0%, #020063 100%), linear-gradient(58.72deg, #2200f2 0%, #530000 100%), linear-gradient(154.03deg, #b70000 0%, #ff003d 74.04%), linear-gradient(341.1deg, #ff0000 7.52%, #0038ff 77.98%), linear-gradient(136.23deg, #00c2ff 11.12%, #ff0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #b50000 0%, #0034bb 100%);
-  background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #f1f0f6;
 }
 
-#landing .landing_container {
-  width: 90%;
-  height: 100%;
+#aboutMe .title_aboutMe {
+  margin: 0.8em 0 0.2em 0;
+  color: #0d004d;
+}
+
+#aboutMe .wrapper_aboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,8 +257,16 @@ Layout
           justify-content: center;
 }
 
-#landing .hero_title {
-  line-height: 1.2;
+#aboutMe .img {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+#aboutMe .text_aboutMe {
+  font-size: 1.25rem;
 }
 
 /*
