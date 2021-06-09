@@ -58,6 +58,14 @@ h3 {
   font-weight: 600;
 }
 
+h4 {
+  font-size: 1.25rem;
+}
+
+li {
+  list-style-type: none;
+}
+
 b {
   font-weight: 500;
 }
@@ -173,6 +181,113 @@ section {
   fill: #44dccd;
 }
 
+.card {
+  border-radius: 15px;
+  color: #0d004d;
+  background-color: #fafafa;
+  width: 225px;
+  height: 350px;
+  margin: 1em 0 2em 0;
+  position: relative;
+}
+
+.card .card_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fafafa;
+  height: 50%;
+}
+
+.card .header_title {
+  text-align: center;
+  margin: 0 1em 1em 1em;
+  z-index: 2;
+}
+
+.card .desktop_icon {
+  margin: 1em 0;
+  z-index: 2;
+}
+
+.card .card_content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .skills_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  margin: 1em 0;
+  z-index: 2;
+}
+
+.card .skill {
+  -webkit-transition: all 450ms ease;
+  transition: all 450ms ease;
+  font-weight: 600;
+}
+
+.card .skill::before {
+  content: "- ";
+}
+
+.card_background {
+  -webkit-transition: all 450ms ease;
+  transition: all 450ms ease;
+  background: linear-gradient(121.28deg, #03002c 0%, #00ff94 100%), linear-gradient(180deg, #00647a 0%, #ffffff 100%), linear-gradient(244.35deg, #ff8282 0%, #e86b6b 50.58%, #001b29 100%), linear-gradient(244.35deg, #e03f3f 0%, #00114b 49.48%, #ff0000 100%), radial-gradient(100% 216.55% at 0% 0%, #2400ff 0%, #ff0000 44.27%, #610051 100%), linear-gradient(307.27deg, #096f5c 0.37%, #687eb5 50.19%, #8877ce 100%), radial-gradient(56.34% 100% at 36.02% 0%, #ff00c7 0%, #006c7a 38.54%, #ff9900 100%);
+  background-blend-mode: overlay, difference, exclusion, overlay, difference, color-dodge, normal;
+  border-radius: 15px 15px 0 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 50%;
+  z-index: 1;
+}
+
+.card:hover .card_background {
+  max-height: 100%;
+  border-radius: 15px;
+}
+
+.card:hover .skill {
+  color: #fafafa;
+}
+
 /*
 ==================
 Special Classes
@@ -191,6 +306,7 @@ Layout
 /* ======== Navbar ======== */
 .navbar {
   position: fixed;
+  z-index: 100;
   height: 4rem;
   width: 100%;
   display: -webkit-box;
@@ -403,6 +519,34 @@ Layout
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+/* ======== My Skils ======== */
+#mySkills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 100vh;
+}
+
+#mySkills .title_mySkills {
+  margin: 0.8em 0 0.2em 0;
+  color: #d80001;
+}
+
+#mySkills .card_backend .card_background {
+  background: radial-gradient(65% 100% at 50% 0%, #18005b 0%, #000000 100%), radial-gradient(circle at 30% 45%, #ff0000 0%, #ff0000 5%, #ffff00 5%, #ffff00 10%, #00ff00 10%, #00ff00 15%, #00ffff 15%, #00ffff 20%, #0000ff 20%, #0000ff 30%, #ff00ff 30%, #ff00ff 40%, #ff0000 40%), radial-gradient(circle at 50% 0%, #ff0000 0%, #ff0000 5%, #ffff00 5%, #ffff00 10%, #00ff00 10%, #00ff00 20%, #00ffff 20%, #00ffff 30%, #0000ff 30%, #0000ff 40%, #ff00ff 40%, #ff00ff 50%, #ff0000 50%), conic-gradient(from 15deg at 20% 420%, #ff0000 0deg, #ff0000 55deg, #ffff00 60deg, #ffff00 120deg, #00ff00 120deg, #00ff00 180deg, #00ffff 180deg, #00ffff 240deg, #0000ff 240deg, #0000ff 300deg, #ff00ff 310deg, #ff00ff 360deg, #ff0000 360deg);
+  background-blend-mode: screen, multiply, multiply, normal;
 }
 
 /*

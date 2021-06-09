@@ -51,6 +51,12 @@ h3 {
   font-size: $size-3;
   font-weight: 600;
 }
+h4 {
+  font-size: $size-4;
+}
+li {
+  list-style-type: none;
+}
 
 b {
   font-weight: 500;
@@ -125,6 +131,70 @@ section {
   }
 }
 
+.card {
+  border-radius: $border-radius-card;
+  color: $cl-blue-2;
+  background-color: $cl-white-1;
+  width: 225px;
+  height: 350px;
+  margin: $margin-card-y;
+  position: relative;
+
+  .card_header {
+    @include flex(column, center, center);
+    color: $cl-white-1;
+    height: 50%;
+  }
+  .header_title {
+    text-align: center;
+    margin: 0 1em 1em 1em;
+    z-index: 2;
+  }
+  .desktop_icon {
+    margin: $margin-text-y;
+    z-index: 2;
+  }
+  .card_content {
+    width: 100%;
+    @include flex(0, center, center);
+  }
+  .skills_wrapper {
+    @include flex(column, 0, space-around);
+    width: 80%;
+    margin: $margin-text-y;
+    z-index: 2;
+  }
+  .skill {
+    @include transition(all, 450ms, ease);
+    font-weight: 600;
+  }
+  .skill::before {
+    content: "- ";
+  }
+}
+
+.card_background {
+  @include transition(all, 450ms, ease);
+  @include gradientSelection("card1");
+  border-radius: $border-radius-card $border-radius-card 0 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 50%;
+  z-index: 1;
+}
+
+.card:hover {
+  .card_background {
+    max-height: 100%;
+    border-radius: $border-radius-card;
+  }
+  .skill {
+    color: $cl-white-1;
+  }
+}
+
 /*
 ==================
 Special Classes
@@ -144,6 +214,7 @@ Layout
 /* ======== Navbar ======== */
 .navbar {
   position: fixed;
+  z-index: 100;
   height: $size-1;
   width: 100%;
   @include flex(0, center, space-between);
@@ -195,6 +266,7 @@ Layout
 /* ======== Landing ======== */
 #landing {
   @include gradientSelection("landing");
+  // background-size: 200%;
 
   .hero_title {
     line-height: 1.2;
@@ -250,6 +322,23 @@ Layout
     width: 335px;
     margin: 1em 0;
     @include flex(0, center, space-around);
+  }
+}
+
+/* ======== My Skils ======== */
+#mySkills {
+  @include flex(column, center, flex-start);
+  min-height: 100vh;
+
+  .title_mySkills {
+    margin: $margin-title-y;
+    color: $cl-red-1;
+  }
+
+  .card_backend {
+    .card_background {
+      @include gradientSelection("card2");
+    }
   }
 }
 
