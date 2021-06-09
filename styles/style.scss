@@ -53,6 +53,7 @@ h3 {
 }
 h4 {
   font-size: $size-4;
+  line-height: $line-height-title;
 }
 li {
   list-style-type: none;
@@ -75,7 +76,7 @@ section {
 }
 
 .title {
-  font-size: $size-2;
+  font-size: $size-1;
   letter-spacing: $letter-spacing;
 }
 
@@ -189,17 +190,75 @@ section {
   .card_background {
     max-height: 100%;
     border-radius: $border-radius-card;
+    filter: brightness(55%);
   }
   .skill {
     color: $cl-white-1;
   }
 }
 
-/*
-==================
-Special Classes
-==================
-*/
+.project {
+  color: $cl-white-1;
+  margin: $margin-project;
+
+  .project_image_wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project_links_container {
+    @include transition();
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $cl-dark-transparent-3;
+    border-radius: $border-radius;
+  }
+  .project_links_container.active {
+    bottom: 1%;
+  }
+
+  .links_wrapper {
+    @include flex(column, center, space-evenly);
+    width: 100%;
+    height: 100%;
+  }
+
+  .project_title {
+    font-weight: 600;
+    font-size: $size-3;
+  }
+  .project_img {
+    @include transition();
+    max-width: 100%;
+    border-radius: $border-radius;
+  }
+  .project_text {
+    text-align: justify;
+    margin: $margin-text-y;
+  }
+}
+
+.tag {
+  @include transition();
+  display: inline-block;
+  cursor: pointer;
+  margin: $margin-tag;
+  border-radius: $border-radius-tag;
+  padding: $padding-tag;
+  font-size: $size-5;
+  font-weight: $tag-font-weight;
+  background-color: $cl-light-transparent-1;
+  color: $cl-light-transparent-3;
+}
+.tag:hover {
+  background-color: $cl-light-transparent-2;
+  color: $cl-light-transparent-4;
+}
+
 .text_outline {
   color: transparent;
   -webkit-text-stroke: 1px $cl-white-1;
@@ -266,7 +325,6 @@ Layout
 /* ======== Landing ======== */
 #landing {
   @include gradientSelection("landing");
-  // background-size: 200%;
 
   .hero_title {
     line-height: 1.2;
@@ -325,7 +383,7 @@ Layout
   }
 }
 
-/* ======== My Skils ======== */
+/* ======== My Skills ======== */
 #mySkills {
   @include flex(column, center, flex-start);
   min-height: 100vh;
@@ -338,6 +396,31 @@ Layout
   .card_backend {
     .card_background {
       @include gradientSelection("card2");
+    }
+  }
+}
+
+/* ======== My Work ======== */
+#myWork {
+  @include flex(column, center, flex-start);
+  @include gradientSelection("myWork");
+
+  .title_myWork {
+    margin: $margin-title-y;
+  }
+
+  .projects_container {
+    .subtitle {
+      font-size: $size-2;
+      color: $cl-red-2;
+    }
+  }
+
+  .components_container {
+    .subtitle {
+      color: $cl-cyan-1;
+      font-size: $size-2;
+      text-align: right;
     }
   }
 }
