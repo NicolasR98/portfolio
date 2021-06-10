@@ -11,12 +11,14 @@
   <body>
     <!-- ========= Navbar ========= -->
     <header class="navbar">
-      <img
-        src="./public/icons/main_logo.svg"
-        alt="Nicolas Rios"
-        srcset=""
-        class="main_logo"
-      />
+      <a href="#landing">
+        <img
+          src="./public/icons/main_logo.svg"
+          alt="Nicolas Rios"
+          srcset=""
+          class="main_logo"
+        />
+      </a>
       <nav class="nav_links">
         <a href="#aboutMe" class="link">About Me</a>
         <a href="#featured" class="link">Featured</a>
@@ -45,7 +47,7 @@
         <div class="section_container">
           <div class="wrapper_aboutMe">
             <h2 class="title title_aboutMe">About Me</h2>
-            <div class="img"></div>
+              <img src="./public/images/profile_pic.png" alt="" srcset="" class="img">
           </div>
           <div class="content_aboutMe">
             <p class="text text_aboutMe">
@@ -67,11 +69,13 @@
           <h2 class="title title_featured text_outline">Featured</h2>
 
           <div class="content_featured">
-            <h3 class="subtitle">PixelMe!</h3>
-            <p class="text text_featured">
-              PixelMe! is a retro pixel sketch app. Made with HTML, CSS and
-              Vanilla JavaScript
-            </p>
+            <div class="subtitle_wrapper">
+              <h3 class="subtitle">PixelMe!</h3>
+              <p class="text text_featured">
+                PixelMe! is a retro pixel sketch app. Made with HTML, CSS and
+                Vanilla JavaScript
+              </p>
+            </div>
             <img
               src="./public/images/mockup.png"
               alt="mockup of PixelMe!"
