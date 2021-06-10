@@ -87,6 +87,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 3em 0;
 }
 
 .section_container {
@@ -175,11 +176,11 @@ section {
 
 .btn_transparent:hover {
   background-color: rgba(0, 0, 0, 0.35);
-  color: #2FC7B8;
+  color: #2fc7b8;
 }
 
 .btn_transparent:hover .svg {
-  fill: #2FC7B8;
+  fill: #2fc7b8;
 }
 
 .card {
@@ -372,6 +373,12 @@ section {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.footer {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
 .text_outline {
   color: transparent;
   -webkit-text-stroke: 1px #fafafa;
@@ -432,7 +439,7 @@ Layout
 
 .navbar .link:hover {
   background-color: rgba(0, 0, 0, 0.35);
-  color: #2FC7B8;
+  color: #2fc7b8;
 }
 
 .navbar .hamburguer {
@@ -501,7 +508,6 @@ Layout
 }
 
 #aboutMe .title_aboutMe {
-  margin: 0.8em 0 0.2em 0;
   color: #0d004d;
 }
 
@@ -550,10 +556,6 @@ Layout
           justify-content: flex-start;
   background: linear-gradient(301.28deg, #00c2ff 54.38%, rgba(0, 255, 224, 0) 100%), linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #8000ff 0%, #ba75ff 54.17%, #ff0000 100%), linear-gradient(58.72deg, #2200f2 0%, #530000 100%), linear-gradient(154.03deg, #ff0000 0%, #00ff94 74.04%), linear-gradient(301.27deg, #ff0000 0%, #0038ff 84.63%), linear-gradient(136.23deg, #00c2ff 11.12%, #ff0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #b50000 0%, #0034bb 100%);
   background-blend-mode: multiply, overlay, color-burn, screen, difference, difference, difference, normal;
-}
-
-#featured .title_featured {
-  margin: 0.8em 0 0.2em 0;
 }
 
 #featured .content_featured {
@@ -619,7 +621,6 @@ Layout
 }
 
 #mySkills .title_mySkills {
-  margin: 0.8em 0 0.2em 0;
   color: #d80001;
 }
 
@@ -648,19 +649,107 @@ Layout
   background-size: 300% 100%;
 }
 
-#myWork .title_myWork {
-  margin: 0.8em 0 0.2em 0;
-}
-
 #myWork .projects_container .subtitle {
   font-size: 3.125rem;
   color: #f8393a;
 }
 
 #myWork .components_container .subtitle {
-  color: #2FC7B8;
+  color: #2fc7b8;
   font-size: 3.125rem;
   text-align: right;
+}
+
+/* ======== Contact Me ======== */
+#contactMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  background-color: #f1f0f6;
+}
+
+#contactMe .title_wrapper {
+  margin: 5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#contactMe .title_gradient {
+  background: linear-gradient(153.03deg, #0500ff 16.92%, #000000 87.01%), linear-gradient(121.28deg, #ffffff 70.31%, rgba(25, 0, 177, 0.85) 100%), linear-gradient(195.81deg, #ffb6b6 8.74%, #00492f 100%), linear-gradient(269.62deg, #ffffff 0.44%, #0077aa 99.56%), radial-gradient(77.85% 100% at 50% 0%, #6bff71 0%, #190024 100%), linear-gradient(339.45deg, #00ff38 1.34%, #ff0000 73.07%), linear-gradient(201.13deg, #22f400 -0.47%, #dbff00 100%), linear-gradient(94.04deg, #18007a 0%, #00d5c8 51.04%, #f4ff75 100%), #ffffff;
+  background-blend-mode: exclusion, multiply, overlay, multiply, color-dodge, difference, difference, normal, normal;
+  margin: 0.1em 0;
+  padding: 0 0.1em;
+}
+
+#contactMe .title_gradient:nth-of-type(2) {
+  background: linear-gradient(130deg, #ad90c1 0%, #030054 100%), linear-gradient(130deg, #09007b 0%, rgba(15, 0, 66, 0) 30%), linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, white 0%, rgba(37, 0, 66, 0.8) 100%), linear-gradient(121.18deg, #1400ff 0.45%, #1b003e 100%), linear-gradient(154.03deg, #ce0000 0%, #ff003d 74.04%), linear-gradient(341.1deg, #b25bba 7.52%, #100077 77.98%), linear-gradient(222.34deg, #a90000 12.99%, #00ffe0 87.21%), linear-gradient(150.76deg, #b7d500 15.35%, #2200aa 89.57%);
+  background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, difference, difference, normal;
+}
+
+#contactMe .title_gradient {
+  font-size: 2.8rem;
+}
+
+#contactMe .contact_title {
+  color: #040918;
+}
+
+#contactMe .btn_wrapper {
+  margin: 0.8em 0 0.2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contactMe .contact_icon {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  fill: #040918;
+}
+
+#contactMe .contact_icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#contactMe .contact_icon.linkedin:hover {
+  fill: #0077b5;
+}
+
+#contactMe .contact_icon.email:hover {
+  fill: #d80001;
 }
 
 /*

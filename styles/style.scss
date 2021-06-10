@@ -67,6 +67,7 @@ section {
   min-height: 100vh;
   width: 100%;
   @include flex(0, center, center);
+  padding: $padding-section-y;
 }
 
 .section_container {
@@ -259,6 +260,12 @@ section {
   color: $cl-light-transparent-4;
 }
 
+.footer {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
 .text_outline {
   color: transparent;
   -webkit-text-stroke: 1px $cl-white-1;
@@ -337,7 +344,6 @@ Layout
   background-color: $cl-white-2;
 
   .title_aboutMe {
-    margin: $margin-title-y;
     color: $cl-blue-2;
   }
 
@@ -362,9 +368,7 @@ Layout
 #featured {
   @include flex(column, center, flex-start);
   @include gradientSelection("featured");
-  .title_featured {
-    margin: $margin-title-y;
-  }
+
   .content_featured {
     color: $cl-white-1;
     @include flex(column, center, center);
@@ -389,7 +393,6 @@ Layout
   min-height: 100vh;
 
   .title_mySkills {
-    margin: $margin-title-y;
     color: $cl-red-1;
   }
 
@@ -405,10 +408,6 @@ Layout
   @include flex(column, center, flex-start);
   @include gradientSelection("myWork");
 
-  .title_myWork {
-    margin: $margin-title-y;
-  }
-
   .projects_container {
     .subtitle {
       font-size: $size-2;
@@ -422,6 +421,51 @@ Layout
       font-size: $size-2;
       text-align: right;
     }
+  }
+}
+
+/* ======== Contact Me ======== */
+#contactMe {
+  @include flex(column, center, flex-start);
+  position: relative;
+  background-color: $cl-white-2;
+
+  .title_wrapper {
+    margin: 5em 0;
+    @include flex(column, flex-start, flex-start);
+  }
+  .title_gradient {
+    @include gradientSelection("title1");
+    margin: 0.1em 0;
+    padding: 0 0.1em;
+  }
+  .title_gradient:nth-of-type(2) {
+    @include gradientSelection("title2");
+  }
+  .title_gradient {
+    font-size: 2.8rem;
+  }
+  .contact_title {
+    color: $cl-black-1;
+  }
+
+  .btn_wrapper {
+    margin: $margin-title-y;
+    @include flex(0, center, space-between);
+  }
+
+  .contact_icon {
+    @include transition();
+    fill: $cl-black-1;
+  }
+  .contact_icon:hover {
+    transform: scale(1.1);
+  }
+  .contact_icon.linkedin:hover {
+    fill: $cl-light-blue;
+  }
+  .contact_icon.email:hover {
+    fill: $cl-red-1;
   }
 }
 

@@ -141,4 +141,40 @@
       );
     background-blend-mode: screen, multiply, multiply, normal;
   }
+
+  @if $section == "title1" {
+    background: linear-gradient(153.03deg, #0500ff 16.92%, #000000 87.01%),
+      linear-gradient(121.28deg, #ffffff 70.31%, rgba(25, 0, 177, 0.85) 100%),
+      linear-gradient(195.81deg, #ffb6b6 8.74%, #00492f 100%),
+      linear-gradient(269.62deg, #ffffff 0.44%, #0077aa 99.56%),
+      radial-gradient(77.85% 100% at 50% 0%, #6bff71 0%, #190024 100%),
+      linear-gradient(339.45deg, #00ff38 1.34%, #ff0000 73.07%),
+      linear-gradient(201.13deg, #22f400 -0.47%, #dbff00 100%),
+      linear-gradient(94.04deg, #18007a 0%, #00d5c8 51.04%, #f4ff75 100%),
+      #ffffff;
+    background-blend-mode: exclusion, multiply, overlay, multiply, color-dodge,
+      difference, difference, normal, normal;
+  }
+
+  @if $section == "title2" {
+    background: linear-gradient(130deg, #ad90c1 0%, rgb(3, 0, 84) 100%),
+      linear-gradient(130deg, #09007b 0%, rgba(15, 0, 66, 0) 30%),
+      linear-gradient(129.96deg, rgb(255, 47, 47) 10.43%, rgb(0, 4, 96) 92.78%),
+      radial-gradient(
+        100% 246.94% at 100% 0%,
+        rgb(255, 255, 255) 0%,
+        rgba(37, 0, 66, 0.8) 100%
+      ),
+      linear-gradient(121.18deg, rgb(20, 0, 255) 0.45%, rgb(27, 0, 62) 100%),
+      linear-gradient(154.03deg, rgb(206, 0, 0) 0%, rgb(255, 0, 61) 74.04%),
+      linear-gradient(341.1deg, rgb(178, 91, 186) 7.52%, rgb(16, 0, 119) 77.98%),
+      linear-gradient(222.34deg, rgb(169, 0, 0) 12.99%, rgb(0, 255, 224) 87.21%),
+      linear-gradient(
+        150.76deg,
+        rgb(183, 213, 0) 15.35%,
+        rgb(34, 0, 170) 89.57%
+      );
+    background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay,
+      difference, difference, normal;
+  }
 }
