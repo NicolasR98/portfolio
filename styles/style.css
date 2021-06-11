@@ -384,6 +384,13 @@ section {
   -webkit-text-stroke: 1px #fafafa;
 }
 
+.hide {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 /*
 ==================
 Layout
@@ -404,8 +411,8 @@ Layout
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: background-color 450ms ease;
-  transition: background-color 450ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   width: 100%;
   height: 4rem;
   padding: 0 1.25em;
@@ -485,6 +492,31 @@ Layout
 #landing {
   background: linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #ffffff 0%, #020063 100%), linear-gradient(58.72deg, #2200f2 0%, #530000 100%), linear-gradient(154.03deg, #b70000 0%, #ff003d 74.04%), linear-gradient(341.1deg, #ff0000 7.52%, #0038ff 77.98%), linear-gradient(136.23deg, #00c2ff 11.12%, #ff0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #b50000 0%, #0034bb 100%);
   background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+  position: relative;
+}
+
+#landing .link_3d {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  position: absolute;
+  max-width: 0px;
+}
+
+#landing .link_3d.linkedin {
+  right: 30%;
+  bottom: 40px;
+}
+
+#landing .link_3d.github {
+  right: 8%;
+  bottom: -120px;
+}
+
+#landing .link_3d:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(135%);
+          filter: brightness(135%);
 }
 
 #landing .section_container {
@@ -631,9 +663,9 @@ Layout
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 100vh;
 }
 
@@ -664,6 +696,10 @@ Layout
   background: linear-gradient(121.28deg, #03002c 0%, #00ff94 100%), linear-gradient(180deg, #00647a 0%, #ffffff 100%), linear-gradient(244.35deg, #ff8282 0%, #e86b6b 50.58%, #001b29 100%), linear-gradient(244.35deg, #e03f3f 0%, #00114b 49.48%, #ff0000 100%), radial-gradient(100% 216.55% at 0% 0%, #2400ff 0%, #ff0000 44.27%, #610051 100%), linear-gradient(307.27deg, #096f5c 0.37%, #687eb5 50.19%, #8877ce 100%), radial-gradient(56.34% 100% at 36.02% 0%, #ff00c7 0%, #006c7a 38.54%, #ff9900 100%);
   background-blend-mode: overlay, difference, exclusion, overlay, difference, color-dodge, normal;
   background-size: 300% 100%;
+}
+
+#myWork .section_container {
+  max-width: 1280px;
 }
 
 #myWork .projects_container .subtitle {
@@ -882,6 +918,9 @@ Media Queries
   .navbar .hamburguer {
     display: none;
   }
+  #landing .link_3d {
+    max-width: 255px;
+  }
   #aboutMe {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -915,6 +954,44 @@ Media Queries
   #myWork .content_myWork {
     width: 80%;
     max-width: 800px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #myWork .content_myWork {
+    max-width: unset;
+  }
+  #myWork .project_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #myWork .project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #myWork .project.left .project_header {
+    margin-right: 2em;
+  }
+  #myWork .project.right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  #myWork .project.right .project_header {
+    margin-left: 2em;
   }
 }
 /*# sourceMappingURL=style.css.map */

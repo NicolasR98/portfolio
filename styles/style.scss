@@ -271,6 +271,11 @@ section {
   -webkit-text-stroke: 1px $cl-white-1;
 }
 
+.hide {
+  @include transition();
+  transform: translateY(-100%);
+}
+
 /*
 ==================
 Layout
@@ -280,7 +285,7 @@ Layout
 /* ======== Navbar ======== */
 .navbar {
   @include flex(0, center, space-between);
-  @include transition(background-color, 450ms, ease);
+  @include transition();
   width: 100%;
   height: $size-1;
   padding: $padding-x;
@@ -334,6 +339,28 @@ Layout
 /* ======== Landing ======== */
 #landing {
   @include gradientSelection("landing");
+  position: relative;
+
+  .link_3d {
+    @include transition(all, 400ms, ease);
+    position: absolute;
+    max-width: 0px;
+  }
+
+  .link_3d.linkedin {
+    right: 30%;
+    bottom: 40px;
+  }
+
+  .link_3d.github {
+    right: 8%;
+    bottom: -120px;
+  }
+
+  .link_3d:hover {
+    transform: scale(1.1);
+    filter: brightness(135%);
+  }
 
   .section_container {
     @include flex(column, flex-start, center);
@@ -393,7 +420,7 @@ Layout
 
 /* ======== My Skills ======== */
 #mySkills {
-  @include flex(column, center, flex-start);
+  @include flex(column, center, center);
   min-height: 100vh;
 
   .title_mySkills {
@@ -411,6 +438,10 @@ Layout
 #myWork {
   @include flex(column, center, flex-start);
   @include gradientSelection("myWork");
+
+  .section_container {
+    max-width: 1280px;
+  }
 
   .projects_container {
     .subtitle {
@@ -558,6 +589,12 @@ Media Queries
     }
   }
 
+  #landing {
+    .link_3d {
+      max-width: 255px;
+    }
+  }
+
   #aboutMe {
     @include flex(row, center, 0);
 
@@ -583,6 +620,36 @@ Media Queries
     .content_myWork {
       width: 80%;
       max-width: 800px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  #myWork {
+    .content_myWork {
+      max-width: unset;
+    }
+
+    .project_content {
+      @include flex(column, flex-start, center);
+    }
+
+    .project {
+      display: flex;
+    }
+
+    .project.left {
+      .project_header {
+        margin-right: 2em;
+      }
+    }
+
+    .project.right {
+      flex-direction: row-reverse;
+
+      .project_header {
+        margin-left: 2em;
+      }
     }
   }
 }
